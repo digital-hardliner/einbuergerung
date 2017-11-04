@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index');
+
+Route::get('/einbuergerungstest','IndexController@index');
+
+Route::get('/fragenkatalog','IndexController@catalogue');
+
+Route::get('/informationen', 'IndexController@index');
+
+Route::get('/populate_general', 'IndexController@populate_general');
