@@ -20,8 +20,8 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-family: 'Slabo 27px', serif;
+                font-size: x-large;
                 margin: 0;
             }
 
@@ -29,11 +29,8 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
+                text-align: center;
             }
 
 
@@ -41,28 +38,40 @@
                 border: 1px solid black;
                 margin: 15px;
                 font-family: 'Slabo 27px', serif;
-                font-size: large;
+                font-size: x-large;
                 padding:20px;
             }
 
+            p {
+                margin-bottom: 20px;
+            }
+
+            .success {
+                background-color: #5cb85c;
+                padding:3px;
+                color:white;
+            }
 
         </style>
     </head>
     <body>
         <div class="container">
-                <h1 style="margin-top:40px;">
+                <u>
+                <h1 style="margin-top:60px;text-align: center;">
                     Einbürgerungstest
                 </h1>
+                </u>
 
-                <div class="links">
+                <div class="links" style="text-align: center;margin-bottom: 30px;">
                         <a href="/einbuergerungstest">Einbürgerungstest starten</a>
                         <a href="/fragenkatalog" }}>Fragenkatalog</a>
                         <a href="/informationen">Informationen</a>
                 </div>
-
+                <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
+                <h2 style="text-align: center;"> Fragenkatalog </h2>
                 @foreach ($questions as $question)
                 <div class="question_block">
-                    <div class="row" style="margin-bottom:20px;">
+                    <div class="row" style="margin-bottom:20px;"">
                         <div class="col-md-4">
                             <b> Frage </b> 
                         </div>
@@ -70,19 +79,40 @@
                             {{  $question->question }}
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="col-md-4">
                             <b> Antworten </b>
                         </div>
                         <div class="col-md-8">
-                            <p> {{  $question->answer_1 }}</p>
-                            <p> {{  $question->answer_2 }}</p>
-                            <p> {{  $question->answer_3 }}</p>
-                            <p> {{  $question->answer_4 }}</p>
+                            <p  @if($question->answer_1 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>1. {{  $question->answer_1 }} </p> 
+                             <p  @if($question->answer_2 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>2. {{  $question->answer_2 }} </p> 
+                             <p @if($question->answer_3 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>3. {{  $question->answer_3 }} </p> 
+                             <p @if($question->answer_4 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>4. {{  $question->answer_4 }}</p> 
+                            <button class="btn btn-success btn-lg" style="font-family: 'Slabo 27px', serif;font-size: x-large;" id="{{ 'show_correct_answer' . $question->id }}" data-dismiss="alert"> Richtige antwort anzeigen</button>
+
+                            <script>
+
+                                document.getElementById("{{'show_correct_answer'. $question->id}}").onclick = function()
+                                {
+                                    var correct_answer = document.getElementById("{{'correct_answer'. $question->id }}");
+                                    if(correct_answer.className == "success")
+                                    {
+                                        //
+                                    }
+                                    else
+                                    {
+                                        correct_answer.className += "success";
+                                    }
+                                    
+                                }
+
+
+                            </script>
                         </div>
                     </div>
+
                 </div>
-                <hr>
                 @endforeach
             </div>
         </div>

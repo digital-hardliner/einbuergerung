@@ -25,6 +25,12 @@ class IndexController extends BaseController
 		return view('welcome');
 	}
 
+	public function start_test()
+	{
+		$questions = Question::all()->random(30);
+		return view('welcome')->with('questions',$questions);
+	}
+
 	public function catalogue()
 	{
 		$questions = Question::all();

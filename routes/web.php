@@ -15,6 +15,8 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/einbuergerungstest','IndexController@index');
 
+Route::get('/einbuergerungstest2017','IndexController@start_test');
+
 Route::get('/fragenkatalog','IndexController@catalogue');
 
 Route::get('/informationen', 'IndexController@index');
