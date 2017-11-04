@@ -31,6 +31,16 @@ class IndexController extends BaseController
 		return view('welcome')->with('questions',$questions);
 	}
 
+	public function evaluate_test()
+	{
+		dd(Input::all());
+		for($i=0;$i<=30;$i++)
+		{
+			//Check if answer is correct
+
+		}
+	}
+
 	public function catalogue()
 	{
 		$questions = Question::all();

@@ -56,11 +56,9 @@
     </head>
     <body>
         <div class="container">
-                <u>
-                <h1 style="margin-top:60px;text-align: center;">
+                <h1 style="margin-top:60px;margin-bottom:30px;text-align: center;">
                     Einbürgerungstest
                 </h1>
-                </u>
 
                 <div class="links" style="text-align: center;margin-bottom: 30px;">
                         <a href="/einbuergerungstest">Einbürgerungstest starten</a>

@@ -85,7 +85,8 @@
                     <a href="/einbuergerungstest2017" class="btn btn-success btn-lg btn-block" style="font-family: 'Slabo 27px', serif;font-size: x-large;"> Einbürgerungstest 2017 Online starten
                 </a>
                 @else
-                {{ Form::open() }}
+                {{ Form::open(['route' => 'evaluate_test']) }}
+                {{ Form::token() }}
                 @foreach ($questions as $key => $question)
                 <div class="question_block"  id="question_block{{ $key }}">
                     <div class="row" style="margin-bottom:20px;"">
@@ -102,15 +103,31 @@
                             <b> Antworten </b>
                         </div>
                         <div class="col-md-8">
-                            <p  @if($question->answer_1 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox( {{ 'select_answer_1' . $question->id }} )  {{  $question->answer_1 }} </p> 
-                             <p  @if($question->answer_2 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer') }} {{  $question->answer_2 }} </p> 
-                             <p @if($question->answer_3 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer') }} {{  $question->answer_3 }} </p> 
-                             <p @if($question->answer_4 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer') }} {{  $question->answer_4 }}</p> 
+                            <p  @if($question->answer_1 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox( 'select_answer[' . $question->id . '][]'),'1' }}  {{  $question->answer_1 }} </p> 
+                             <p  @if($question->answer_2 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'2'}} {{  $question->answer_2 }} </p> 
+                             <p @if($question->answer_3 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'3' }} {{  $question->answer_3 }} </p> 
+                             <p @if($question->answer_4 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'4' }} {{  $question->answer_4 }}</p> 
                              
                         <button id="{{'next_question_'. $key }}" class="btn btn-primary btn-lg btn-block" data-dismiss='alert'> Nächste Frage </button>
  
 
-                            <script>
+                        <script>
+
+                        $("input:checkbox").on('click', function() {
+                            // in the handler, 'this' refers to the box clicked on
+                            var $box = $(this);
+                            if ($box.is(":checked")) {
+                            // the name of the box is retrieved using the .attr() method
+                            // as it is assumed and expected to be immutable
+                            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                            // the checked state of the group/box on the other hand will change
+                            // and the current value is retrieved using .prop() method
+                            $(group).prop("checked", false);
+                            $box.prop("checked", true);
+                            } else {
+                                $box.prop("checked", false);
+                                }
+                            });
 
                                 $("{{ '#next_question_' . $key}}").click(function()
                                 {
@@ -139,7 +156,7 @@
 
                 <div class="row" style="margin-bottom:150px;margin-top:30px;">
                 <div class="col-md-12">
-                <button class="btn btn-success btn-lg btn-block" style="display:none;text-align:center;font-family: 'Slabo 27px', serif;font-size: x-large;" id="show_results" data-dismiss="alert"> Test Ergebnisse anzeigen </button>
+                <button type="submit" class="btn btn-success btn-lg btn-block" style="display:none;text-align:center;font-family: 'Slabo 27px', serif;font-size: x-large;" id="show_results"> Test Ergebnisse anzeigen </button>
                 </div>
                 {{ Form::close() }}
                 @endif
