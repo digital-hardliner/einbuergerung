@@ -84,7 +84,7 @@
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
                 <div class="row">
-                    @if($score > 2 )
+                    @if($score < 17 )
                     <h2 style="text-align: center;color:red;"> Nicht bestanden! </h2>
                     @else
                     <h2 style="text-align: center;color:green;"> Glückwunsch! Sie haben bestanden. </h2>
@@ -157,7 +157,7 @@
                 </div>
             </div>
         </body>
-        
+
     <footer class="footer" style="text-align:center" >
         <a href="/impressum">Impressum</a>
     </footer>
