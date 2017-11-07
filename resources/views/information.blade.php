@@ -70,53 +70,35 @@
                         <a href="/informationen">Informationen</a>
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
-                <h2 style="text-align: center;"> Fragenkatalog </h2>
-                @foreach ($questions as $question)
-                <div class="question_block">
-                    <div class="row" style="margin-bottom:20px;"">
-                        <div class="col-md-4">
-                            <b> Frage </b> 
-                        </div>
-                        <div class="col-md-8">
-                            {{  $question->question }}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <b> Antworten </b>
-                        </div>
-                        <div class="col-md-8">
-                            <p  @if($question->answer_1 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>1. {{  $question->answer_1 }} </p> 
-                             <p  @if($question->answer_2 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>2. {{  $question->answer_2 }} </p> 
-                             <p @if($question->answer_3 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>3. {{  $question->answer_3 }} </p> 
-                             <p @if($question->answer_4 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif>4. {{  $question->answer_4 }}</p> 
-                            <button class="btn btn-success btn-lg" style="font-family: 'Slabo 27px', serif;font-size: x-large;" id="{{ 'show_correct_answer' . $question->id }}" data-dismiss="alert"> Richtige Antwort anzeigen</button>
+<h1 style="">  Einbürgerung in Deutschland </h1>
+            Wenn Sie dauerhaft in Deutschland leben, können Sie sich unter bestimmten Voraussetzungen einbürgern lassen.
 
-                            <script>
+Sie müssen dazu einen Antrag stellen. Ab Ihrem 16. Geburtstag können Sie diesen Antrag selbst stellen. Für Kinder und Jugendliche unter 16 müssen die Eltern den Antrag stellen.
 
-                                document.getElementById("{{'show_correct_answer'. $question->id}}").onclick = function()
-                                {
-                                    var correct_answer = document.getElementById("{{'correct_answer'. $question->id }}");
-                                    if(correct_answer.className == "success")
-                                    {
-                                        //
-                                    }
-                                    else
-                                    {
-                                        correct_answer.className += "success";
-                                    }
-                                    
-                                }
+Antragsformulare erhalten Sie bei den zuständigen Einbürgerungsbehörden. Welche Behörde für Ihre Einbürgerung zuständig ist, erfahren Sie bei:
+
+<li> der Ausländerbehörde Ihrer Stadt oder Gemeinde </li>
+<li> den Jugendmigrationsdiensten (JMD) </li>
+<li> der Migrationsberatung für erwachsene Zuwanderer (MBE) </li>
+<li> der Stadt- oder Kreisverwaltung. </li>
 
 
-                            </script>
-                        </div>
-                    </div>
+<h2> Kosten </h2>
+Die Einbürgerung kostet 255 Euro pro Person. Für minderjährige Kinder, die mit ihren Eltern zusammen eingebürgert werden, sind 51 Euro zu bezahlen. Minderjährige, die ohne ihre Eltern eingebürgert werden, müssen ebenfalls 255 Euro bezahlen.
 
-                </div>
-                @endforeach
-            </div>
+Wenn Sie nur sehr wenig verdienen oder mehrere Kinder (mit)eingebürgert werden, kann die Gebühr reduziert oder Ratenzahlung vereinbart werden.
+
+<h2> Voraussetzungen </h2>
+Sie haben einen Anspruch auf Einbürgerung, wenn folgende Voraussetzungen vorliegen:
+
+<li> unbefristetes Aufenthaltsrecht zum Zeitpunkt der Einbürgerung, eine Blaue Karte EU oder eine befristete Aufenthaltserlaubnis, die ihrem Zweck nach zu einem dauerhaften Aufenthalt führen kann</li>
+<li>bestandener Einbürgerungstest (Kenntnisse über die Rechts- und Gesellschaftsordnung sowie die Lebensverhältnisse in Deutschland) </li>
+<li>seit acht Jahren gewöhnlicher und rechtmäßiger Aufenthalt in Deutschland (diese Frist kann nach erfolgreichem Besuch eines Integrationskurses auf sieben Jahre verkürzt werden, bei besonderen Integrationsleistungen sogar auf sechs Jahre) </li>
+<li>eigenständige Sicherung des Lebensunterhalts (auch für unterhaltsberechtigte Familienangehörige) ohne Sozialhilfe und Arbeitslosengeld II </li>
+<li>ausreichende Deutschkenntnisse </li>
+<li>keine Verurteilung wegen einer Straftat </li>
+<li>Bekenntnis zur freiheitlichen demokratischen Grundordnung des Grundgesetzes der Bundesrepublik Deutschland </li>
+<li>grundsätzlich der Verlust beziehungsweise die Aufgabe der alten Staatsangehörigkeit (hier gibt es Ausnahmen je nach Herkunftsland, bitte sprechen Sie mit der Einbürgerungsbehörde).</li>
         </div>
     </body>
 

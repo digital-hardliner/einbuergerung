@@ -15,12 +15,14 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/einbuergerungstest','IndexController@index');
 
-Route::get('/einbuergererungstest-pruefen','IndexController@evaluate_test')->name('evaluate_test');
+Route::get('/einbuergererungstest-pruefen','IndexController@evaluate_test');
 
 Route::get('/einbuergerungstest2017','IndexController@start_test');
 
 Route::get('/fragenkatalog','IndexController@catalogue');
 
-Route::get('/informationen', 'IndexController@index');
+Route::get('/informationen', 'IndexController@informations');
 
 Route::get('/populate_general', 'IndexController@populate_general');
+
+Route::get('/impressum','IndexController@impressum');

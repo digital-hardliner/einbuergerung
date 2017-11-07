@@ -1,3 +1,8 @@
+<!-- To-Dos:
+- disable not selecting any answer
+
+-->
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -29,6 +34,10 @@
                 font-family: 'Slabo 27px', serif;
                 font-size: x-large;
                 margin: 0;
+            }
+
+            .container {
+                height: 90vh;
             }
 
 
@@ -85,7 +94,7 @@
                     <a href="/einbuergerungstest2017" class="btn btn-success btn-lg btn-block" style="font-family: 'Slabo 27px', serif;font-size: x-large;"> Einbürgerungstest 2017 Online starten
                 </a>
                 @else
-                {{ Form::open(['route' => 'evaluate_test']) }}
+                {{ Form::open(['method' => 'get', 'action' => 'IndexController@evaluate_test']) }}
                 {{ Form::token() }}
                 @foreach ($questions as $key => $question)
                 <div class="question_block"  id="question_block{{ $key }}">
@@ -103,10 +112,12 @@
                             <b> Antworten </b>
                         </div>
                         <div class="col-md-8">
-                            <p  @if($question->answer_1 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox( 'select_answer[' . $question->id . '][]'),'1' }}  {{  $question->answer_1 }} </p> 
-                             <p  @if($question->answer_2 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'2'}} {{  $question->answer_2 }} </p> 
-                             <p @if($question->answer_3 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'3' }} {{  $question->answer_3 }} </p> 
-                             <p @if($question->answer_4 == $question->correctAnswer) id={{ "correct_answer" . $question->id }} @endif> {{ Form::checkbox('select_answer[' . $question->id . '][]'),'4' }} {{  $question->answer_4 }}</p> 
+                        <fieldset id="{{ 'answersArray' . $key }}">
+                            <p> {{ Form::checkbox( 'select_answer[' . $question->id . '][]','1') }}  {{  $question->answer_1 }} </p> 
+                             <p> {{ Form::checkbox('select_answer[' . $question->id . '][]','2')}} {{  $question->answer_2 }} </p> 
+                             <p> {{ Form::checkbox('select_answer[' . $question->id . '][]','3') }} {{  $question->answer_3 }} </p> 
+                             <p> {{ Form::checkbox('select_answer[' . $question->id . '][]','4') }} {{  $question->answer_4 }}</p>
+                        </fieldset>
                              
                         <button id="{{'next_question_'. $key }}" class="btn btn-primary btn-lg btn-block" data-dismiss='alert'> Nächste Frage </button>
  
@@ -131,6 +142,13 @@
 
                                 $("{{ '#next_question_' . $key}}").click(function()
                                 {
+                                    var string1 = 'input[name="select_answer[';
+                                    var string2 = '{{ $question->id }}';
+                                    var string3 = '][]"]:checked';
+                                    //var atLeastOneIsChecked = $("{{ '#answersArray' . $key  . ':checkbox:checked'}}").length;
+                                    var atLeastOneIsChecked = $(string1.concat(string2,string3)).length;
+                                    if(atLeastOneIsChecked > 0)
+                                    {
                                     if({{ $key }} <= 27){
                                     $("#{{ 'question_block' . $key }}").css("display", "none");
                                     $("#{{ 'question_block' . ($key+1) }}").css("display", "block");
@@ -140,6 +158,10 @@
                                         $("#{{ 'question_block' . ($key+1) }}").css("display", "block");
                                         $("#{{ 'next_question_' . ($key+1) }}").css("display","none");
                                         $("#show_results").css("display","block");
+                                    }
+                                    }
+                                    else {
+                                        alert('Sie müssen eine Antwort auswählen.')
                                     }
                                 });
 
@@ -166,6 +188,11 @@
             </div>
         </div>
     </body>
+
+    <footer class="footer" style="text-align:center" >
+        <a href="/impressum">Impressum</a>
+    </footer>
+
 </html>
 <script type="text/javascript">
 

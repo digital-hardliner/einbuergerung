@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 
+
 use App\Question;
 use Illuminate\Routing\Controller as BaseController;
+use Input;
 use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
 
@@ -25,6 +27,16 @@ class IndexController extends BaseController
 		return view('welcome');
 	}
 
+	public function informations()
+	{
+		return view('information');
+	}
+
+	public function impressum()
+	{
+		return view('impressum');
+	}
+
 	public function start_test()
 	{
 		$questions = Question::all()->random(30);
@@ -33,12 +45,37 @@ class IndexController extends BaseController
 
 	public function evaluate_test()
 	{
-		dd(Input::all());
-		for($i=0;$i<=30;$i++)
+		$score = 0;
+		$wrong_answers = [];
+		$correct_answers = [];
+		$selected_answers = Input::get('select_answer');
+		foreach ($selected_answers as $key => $select_answer)
 		{
-			//Check if answer is correct
+			$question = Question::find($key);
+			//get counter of correct answer
+			$correct_answer_id = 0;
+			for ($i = 1 ; $i<5 ; $i++)
+			{
+				if( $question['answer_'.$i] == $question['correctAnswer'])
+				{
+					$correct_answer_id = $i;
+				}
+			}
+			
+			//check if the checked answer is correct
+			if($select_answer[0] == $correct_answer_id) {
+				$correct_answers[] = $question;
+				$score++;
+			}
+			else
+			{
+				$question['selected'] = $select_answer[0];
+				$wrong_answers[] = $question;
+			}
 
 		}
+		return view('results')->with('score',$score)->with('wrong_answers',$wrong_answers)->with('correct_answers',$correct_answers);
+
 	}
 
 	public function catalogue()
