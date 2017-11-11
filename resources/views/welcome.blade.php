@@ -13,6 +13,17 @@
                         <a href="/informationen">Informationen</a>
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
+
+<script type="text/javascript">
+    google_ad_client = "ca-pub-1215022576361904";
+    google_ad_slot = "9372847472";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- Leaderbord Einbürgerungstest -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
                 <div class="row">
 
                 <h2 style="text-align: center;"> Einbürgerungstest Online</h2>
