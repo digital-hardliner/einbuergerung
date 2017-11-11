@@ -22,9 +22,32 @@ class IndexController extends BaseController
 	public $correctAnswer;
 
 
+	//Referate
+	public $userListe;
+
+
 	public function index()
 	{
 		return view('welcome');
+	}
+
+	public function write_to_user()
+	{
+
+		$client = new Client();
+		$this->crawler = $client->request('GET', 'https://e-hausaufgaben.de/mitglieder.php');
+
+		//Uncheck gerade online (not working)
+		$form = $this->crawler->filter('#suchform')->form();
+		$form['online']->untick();
+
+		//Get Username list
+		$this->crawler->filterXPath('//a[@class="txt_orange"]')->each(function ($node) {
+			$this->userListe[] = $node->text();
+		});
+		dd($this->userListe);
+
+
 	}
 
 	public function informations()

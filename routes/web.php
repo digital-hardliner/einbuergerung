@@ -26,3 +26,5 @@ Route::get('/informationen', 'IndexController@informations');
 Route::get('/populate_general', 'IndexController@populate_general');
 
 Route::get('/impressum','IndexController@impressum');
+
+Route::get('/write-to-user', 'IndexController@write_to_user');
