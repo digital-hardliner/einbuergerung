@@ -12,16 +12,7 @@
                         <a href="/informationen">Informationen</a>
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Header Ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1215022576361904"
-     data-ad-slot="8727347193"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
                 <h2 style="text-align: center;"> Fragenkatalog </h2>
                 @foreach ($questions as $question)
                 <div class="question_block">
