@@ -14,7 +14,16 @@
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
                 <div class="row">
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Einbürgerungstest Header -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1370883230698127"
+     data-ad-slot="6392079467"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 <h2 style="text-align: center;"> Einbürgerungstest Online</h2>
                 @if(empty($questions))
                 <p>
