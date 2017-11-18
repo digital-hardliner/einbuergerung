@@ -14,21 +14,21 @@
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
                 <div class="row">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Einbürgerungstest Header -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1370883230698127"
-     data-ad-slot="6392079467"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
                 <h2 style="text-align: center;"> Einbürgerungstest Online</h2>
                 @if(empty($questions))
                 <p>
                     Durch die erfolgreiche Teilnahme am Einbürgerungstest können Sie Kenntnisse der Rechts- und Gesellschaftsordnung und der Lebensverhältnisse in Deutschland nachweisen, die Sie benötigen, um sich in Deutschland einbürgern zu lassen.
                 </p>
+                
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Einbürgerungstest 2017 Large Rectangle -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1370883230698127"
+     data-ad-slot="4739671151"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                 
                     <a href="/einbuergerungstest2017" class="btn btn-success btn-lg btn-block" style="font-family: 'Slabo 27px', serif;font-size: x-large; margin-bottom: 250px;"> Einbürgerungstest 2017 Online starten
                 </a>
@@ -126,6 +126,17 @@
 
             </div>
         </div>
+        
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Leben in Deutschland Header -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1370883230698127"
+     data-ad-slot="5161864056"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
     </body>
 
 @include('footer')
