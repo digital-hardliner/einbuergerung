@@ -13,11 +13,10 @@
                 </div>
                 <hr style="height:5px;border:none;color:#333;background-color:#333; margin-bottom: 60px;" />
 <h1 style="">  Einbürgerung in Deutschland </h1>
-            Wenn Sie dauerhaft in Deutschland leben, können Sie sich unter bestimmten Voraussetzungen einbürgern lassen.
 
-Sie müssen dazu einen Antrag stellen. Ab Ihrem 16. Geburtstag können Sie diesen Antrag selbst stellen. Für Kinder und Jugendliche unter 16 müssen die Eltern den Antrag stellen.
-
-Antragsformulare erhalten Sie bei den zuständigen Einbürgerungsbehörden. Welche Behörde für Ihre Einbürgerung zuständig ist, erfahren Sie bei:
+Dauerhaftes Leben in Deutschland ist unter gewissen Voraussetzungen möglich. Wenn Sie einige Richtlinien befolgen, können Sie sogar die deutsche Staatsbürgerschaft erlangen, durch eine Antragstellung. Wenn Sie über 16 Jahre alt sind können Sie den Antrag selbst stellen, ansonsten können Ihre Eltern den Antrag für Sie stellen.
+Die zugehörigen Antragsformulare erhalten Sie bei ihrer zuständigen Einbürgerungsbehörde.
+Sie können bei folgenden Behörden ihrer Stadt oder Gemeinde nachfragen, welche Behörde für ihre Einbürgerung verantwortlich ist:
 
 <li> der Ausländerbehörde Ihrer Stadt oder Gemeinde </li>
 <li> den Jugendmigrationsdiensten (JMD) </li>
@@ -26,21 +25,21 @@ Antragsformulare erhalten Sie bei den zuständigen Einbürgerungsbehörden. Welc
 
 
 <h2> Kosten </h2>
-Die Einbürgerung kostet 255 Euro pro Person. Für minderjährige Kinder, die mit ihren Eltern zusammen eingebürgert werden, sind 51 Euro zu bezahlen. Minderjährige, die ohne ihre Eltern eingebürgert werden, müssen ebenfalls 255 Euro bezahlen.
-
-Wenn Sie nur sehr wenig verdienen oder mehrere Kinder (mit)eingebürgert werden, kann die Gebühr reduziert oder Ratenzahlung vereinbart werden.
+Die Kosten einer Einbürgerung belaufen sie auf 255 Euro pro Person. Für Jugendliche unter 18, die mit ihren Eltern zusammen eingebürgert werden, sind 51 Euro pro Kind zu bezahlen.
+Minderjährige die ohne ihre Eltern einbürgert werden, müssen ebenfalls den vollen Preis zahlen (255 Euro).
+Wenn Sie sehr wenig verdienen oder mehrere Kinder mit eingebürgert werden, kann die Gebühr reduziert oder Ratenzahlung vereinbart werden.
 
 <h2> Voraussetzungen </h2>
-Sie haben einen Anspruch auf Einbürgerung, wenn folgende Voraussetzungen vorliegen:
+Unter folgenden Rahmenbedingungen haben Sie einen Anspruch auf Einbürgerung:
 
-<li> unbefristetes Aufenthaltsrecht zum Zeitpunkt der Einbürgerung, eine Blaue Karte EU oder eine befristete Aufenthaltserlaubnis, die ihrem Zweck nach zu einem dauerhaften Aufenthalt führen kann</li>
-<li>bestandener Einbürgerungstest (Kenntnisse über die Rechts- und Gesellschaftsordnung sowie die Lebensverhältnisse in Deutschland) </li>
-<li>seit acht Jahren gewöhnlicher und rechtmäßiger Aufenthalt in Deutschland (diese Frist kann nach erfolgreichem Besuch eines Integrationskurses auf sieben Jahre verkürzt werden, bei besonderen Integrationsleistungen sogar auf sechs Jahre) </li>
-<li>eigenständige Sicherung des Lebensunterhalts (auch für unterhaltsberechtigte Familienangehörige) ohne Sozialhilfe und Arbeitslosengeld II </li>
-<li>ausreichende Deutschkenntnisse </li>
-<li>keine Verurteilung wegen einer Straftat </li>
-<li>Bekenntnis zur freiheitlichen demokratischen Grundordnung des Grundgesetzes der Bundesrepublik Deutschland </li>
-<li>grundsätzlich der Verlust beziehungsweise die Aufgabe der alten Staatsangehörigkeit (hier gibt es Ausnahmen je nach Herkunftsland, bitte sprechen Sie mit der Einbürgerungsbehörde).</li>
+<li> Unbefristeten Aufenthaltstitel zum Zeitpunkt der Einbürgerung, Blaue Karte der EU oder einen befristeten Aufenthaltstitel</li>
+<li>Erfolgreicher Einbürgerungstest </li>
+<li>Über 8 Jahre rechtmäßiger Lebensmittelpunkt in Deutschland (kann bei Besuch eines Integrationskurses auf 7 Jahre, bei besonderen Integrationsleisten sogar auf 6 Jahre, reduziert werden)</li>
+<li> Selbstständige Sicherung des Lebensunterhaltes ohne Sozialleistungen </li>
+<li>Ausreichende Deutschkenntnisse </li>
+<li> Keine Verurteilungen wegen Strafdelikten </li>
+<li>Bekenntnis zur demokratischen und freiheitlichen Gesellschafts- und Grundordnung und des Grundgesetzes der deutschen Bundesrepublik </li>
+<li>Verlust der alten Staatsangehörigkeit (bis auf Ausnahmen)</li>
         </div>
     </body>
 
