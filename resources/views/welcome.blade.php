@@ -20,14 +20,12 @@
                     Durch die erfolgreiche Teilnahme am Einbürgerungstest können Sie Kenntnisse der Rechts- und Gesellschaftsordnung und der Lebensverhältnisse in Deutschland nachweisen, die Sie benötigen, um sich in Deutschland einbürgern zu lassen.
                 </p>
                 
- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Einbürgerungstest 2017 Large Rectangle -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:336px;height:280px"
-     data-ad-client="ca-pub-1370883230698127"
-     data-ad-slot="4739671151"></ins>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
-(adsbygoogle = window.adsbygoogle || []).push({});
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9141982009979424",
+    enable_page_level_ads: true
+  });
 </script>
                 
                     <a href="/einbuergerungstest2017" class="btn btn-success btn-lg btn-block" style="font-family: 'Slabo 27px', serif;font-size: x-large; margin-bottom: 250px;"> Einbürgerungstest 2017 Online starten
